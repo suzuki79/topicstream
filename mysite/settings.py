@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'topics',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,7 +69,7 @@ SESSION_ENGINE = 'mongoengine.django.sessions' # optional
 _MONGODB_USER = 'root'
 _MONGODB_PASSWD = 'root'
 _MONGODB_HOST = 'localhost'
-_MONGODB_NAME = 'test'
+_MONGODB_NAME = 'news_development'
 _MONGODB_DATABASE_HOST = \
     'mongodb://%s:%s@%s/%s' \
     % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)

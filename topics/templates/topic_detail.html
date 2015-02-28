@@ -1,0 +1,17 @@
+
+
+<div class="daytopic">
+  {% for topic in topic_stream %}
+  <span> {{ topic.topic_date }}</span>
+  <ul>
+    {% for doc in topic.doc_list %}
+    <li onclick="openTfidf('{{doc.id}}')">{{ doc.title }}</li>
+    <span class = "tfidf" id={{doc.id}} onclick="closeTfidf('{{doc.id}}')" style="display: none;">
+      {% for kv in doc.tfidfs %}
+      <td>[{{kv.0}}:{{kv.1}}]</td>
+      {% endfor %}
+    </span>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>

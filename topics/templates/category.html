@@ -1,0 +1,6 @@
+<ul class="nav nav-sidebar">
+  {% for category in categories %}
+  <li><a href="#" onclick="showTopicLine('{{category.cd}}')">{{category.cd}}</a></li>
+  {% endfor %}
+  <!--li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li-->
+</ul>

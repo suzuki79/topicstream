@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<head>
+  <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" media="screen">
+  <link href="{% static "css/index.css" %}" rel="stylesheet" media="screen">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Topic Stream</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <!--li><a href="#">Dashboard</a></li-->
+          <li><a href="#">Settings</a></li>
+          <!--li><a href="#">Profile</a></li-->
+          <li><a href="#">Help</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <div id = "side-bar-category">
+          <!--load category sidebar here-->
+        </div>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="header-container">
+          <img src="{% static "img/logo.jpg" %} " width = "40%">
+        </div>
+        <div class="topicline-container">
+          <div id="topic-line">
+            <!--load topic line here -->
+          </div>
+        </div>
+        <div class="topicdetail-container">
+          <div><div class="day-title"><h4 onclick="showAll()">Topic Detail</h4></div></div>
+          <div id = "topic-detail">
+            <!--load topic detail here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{% static "js/index.js" %}" type="text/javascript"></script>
+  <script tyep = "text/javascript">
+  $(window).bind("load",function(){
+    showCategory();
+  });
+  </script>
+</body>

@@ -1,0 +1,16 @@
+<!--
+トピックストリームのラインをローディング
+-->
+{% for topic in topics %}
+<div class="topic" onclick="showTopicDetail('{{topic.id}}')">
+  <div class = "topic-picture" style = "background-image: url('{{topic.image}}');">
+  </div>
+  <div class ="right">
+    <div class = "topic-title">{{topic.topic_name}}</div>
+    <div class = "bottom">
+      <div class="topic-stats">記事数:{{topic.article_count}}   トピック日数:{{topic.stream_count}}   期間:{{topic.span}}</div>
+      <div class="topic-content">{{topic.summary}}</div>
+    </div>
+  </div>
+</div>
+{% endfor %}
